@@ -8,4 +8,5 @@ public interface Dispositivo {
     void setVolume(int percent);
     int getChannel();
     void setChannel(int channel);
+    void printStatus();
 }

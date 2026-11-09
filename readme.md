@@ -252,24 +252,24 @@ Extensibilidad independiente: Podemos agregar nuevos dispositivos O nuevos contr
 
 * Explosión de Clases: ¿Cuántas clases necesitaríamos si tuviéramos 3 tipos de controles y 4 tipos de dispositivos sin el patrón Bridge? ¿Y con el patrón Bridge?
 
-## Sin bridge, con 3 tipos de controles y 4 tipos de dispositivos necesitariamos de una clase por cada combinacion, en total 12 y con bridge solo se necesitarian 7.
+Sin bridge, con 3 tipos de controles y 4 tipos de dispositivos necesitariamos de una clase por cada combinacion, en total 12 y con bridge solo se necesitarian 7.
 
 * Acoplamiento: ¿Qué pasaría si la clase ControlRemotoBasico heredara directamente de Radio o TV en lugar de usar composición?
 
-## Si ControlRemotoBasico hereda directamente de TV, quedaria atado a un solo dispositivo. No se podria reutilizar con otros dispositivos y se tendria que duplicar para cada combinacion y con composicion el control funcionaria en cualquier dispositivo.
+Si ControlRemotoBasico hereda directamente de TV, quedaria atado a un solo dispositivo. No se podria reutilizar con otros dispositivos y se tendria que duplicar para cada combinacion y con composicion el control funcionaria en cualquier dispositivo.
 
 * Extensibilidad: Si quiero agregar un nuevo dispositivo (ej: Projector), ¿qué cambios necesito hacer? ¿Necesito modificar las clases de controles existentes?
 
-## Solo hay que crear la clase `Projector implements Dispositivo`. y nop s etendria que realizar ningun cambio, los controles existentes ya serian compatibles y funcionarian con el nuevo dispositivo.
+Solo hay que crear la clase `Projector implements Dispositivo`. y nop s etendria que realizar ningun cambio, los controles existentes ya serian compatibles y funcionarian con el nuevo dispositivo.
 
 * Principios SOLID: ¿Qué principios SOLID se aplican en este patrón? (Especialmente Principio de Inversión de Dependencias y * Principio Abierto/Cerrado)
 
-## Abierto/Cerrado: Se pueden agregar nuevos dispositivos o controles sin modificar el código que ya existe.
-## Inversión de Dependencias: El control depende de la intefaz Dispositivo, no de clases en concreto.
+Abierto/Cerrado: Se pueden agregar nuevos dispositivos o controles sin modificar el código que ya existe.
+Inversión de Dependencias: El control depende de la intefaz Dispositivo, no de clases en concreto.
 
 * Flexibilidad: ¿Cómo nos beneficiamos al poder cambiar el dispositivo de un control en tiempo de ejecución?
 
-## Como el control tiene una referencia al dispositivo se puede cambiar el dispositivo en tiempo de ejecución.
+Como el control tiene una referencia al dispositivo se puede cambiar el dispositivo en tiempo de ejecución.
 
 ### 🧪 Ejercicios de Extensión
 
